@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package review;
+
+service ReviewService {
+    rpc CreateReview (Review) returns (ReviewResponse) {}
+    rpc GetReview (ReviewId) returns (Review) {}
+    rpc UpdateReview (ReviewId) returns (ReviewResponse) {}
+    rpc DeleteReview (ReviewId) returns (ReviewResponse) {}
+    rpc ListReviews (Empty) returns (ReviewList) {}
+}
+
+message Review {
+    string reviewID = 1;
+    string userID = 2;
+    string petID = 3;
+    string reviewedUserID = 4;
+    string reviewedPetID = 5;
+    string review = 6;
+    string requestID = 7;
+    string status = 8;
+}
+
+message ReviewId {
+    string reviewID = 1;
+}
+
+message ReviewResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message Empty {}
+
+message ReviewList {
+    repeated Review reviews = 1;
+}

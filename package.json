@@ -1,0 +1,29 @@
+{
+  "name": "pawmatch-proj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:user": "nodemon services/user-service/user-service.js",
+    "start:review": "nodemon services/review-service/review-service.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "@grpc/reflection": "^1.0.4",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.20.0",
+    "grpc-server-reflection": "^0.1.5",
+    "grpc-tools": "^1.12.4",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.1",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
